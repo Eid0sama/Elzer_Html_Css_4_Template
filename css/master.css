@@ -667,9 +667,206 @@ ul {
 
 /* End Projects */
 /* start settings */
+
+.settings {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+@media (max-width:767px) {
+    .settings {
+        grid-template-columns: minmax(100px, 1fr);
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 10px;
+    }
+}
+
+
+.site-control textarea {
+    border: 1px solid #ccc;
+    min-height: 150px;
+    resize: none;
+}
+
+.genral-info input {
+    border: 1px solid #ccc;
+}
+
+.genral-info input:disabled {
+    cursor: not-allowed;
+    background-color: #f0f4f8;
+    color: #bbb;
+    display: inline-flex;
+    width: calc(100% - 80px);
+}
+
+.security-info a {
+    cursor: pointer;
+}
+
+.security-option:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.settings .social-boxes i {
+    width: 40px;
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #DDD;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: 0.3s;
+}
+
+.settings .social-boxes input {
+    height: 40px;
+    background-color: #f6f6f6;
+    border: 1px solid #DDD;
+    padding: 10px;
+    border-radius: 0 6px 6px 0;
+}
+
+.settings .social-boxes>div:focus-within i {
+    color: black;
+}
+
+.widgets-control .control input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.widgets-control .control label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.widgets-control .control label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--grey-color);
+    margin-top: -9px;
+    border-radius: 4px;
+}
+
+.widgets-control .control label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+
+.widgets-control .control label::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.widgets-control .control input[type="checkbox"]:checked+label::after {
+    transform: scale(1);
+}
+
+
+
+.backup-manager input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.backup-manager .control label {
+    padding-left: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.backup-manager .control label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--grey-color);
+    margin-top: -9px;
+    border-radius: 50%;
+}
+
+.backup-manager .control label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+
+.backup-manager .control label::after {
+    content: "";
+    font-weight: 900;
+    position: absolute;
+    left: -1px;
+    top: 0px;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.backup-manager .control input[type="radio"]:checked+label::after {
+    transform: scale(0.5);
+}
+
+.backup-manager .control input[type="radio"]:checked+label::before {
+    border-color: var(--blue-alt-color);
+}
+
+.backup-manager .servers {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+@media (max-width:767px) {
+    .backup-manager .servers {
+        flex-wrap: wrap;
+    }
+}
+
+.backup-manager .servers .server {
+    border: 2px solid #eee;
+    position: relative;
+}
+
+.backup-manager .servers .server label {
+    cursor: pointer;
+}
+
+.backup-manager .servers input[type="radio"]:checked+.server {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+
 .toggle-checkbox {
     -webkit-appearance: none;
     appearance: none;
+    display: none;
 }
 
 .toggle-switch {
@@ -712,11 +909,6 @@ ul {
     left: 50px;
 }
 
-.site-control textarea {
-    border: 1px solid #ccc;
-    min-height: 150px;
-    resize: none;
-}
 
 /* End settings */
 /* start animation*/

@@ -91,12 +91,20 @@
     padding-top: 20px;
 }
 
+.pb-15 {
+    padding-bottom: 15px;
+}
+
 .pb-20 {
     padding-bottom: 20px;
 }
 
 .p-button {
     padding: 5px 10px;
+}
+
+.m-15 {
+    margin: 15px;
 }
 
 .m-20 {
@@ -141,6 +149,10 @@
 
 .mb-10 {
     margin-bottom: 10px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
 }
 
 .mb-20 {
@@ -307,6 +319,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
