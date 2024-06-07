@@ -60,7 +60,7 @@ ul {
 
 .sidebar {
     width: 250px;
-    box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 08 #ddd;
 }
 
 .sidebar>h3 {
@@ -911,6 +911,151 @@ ul {
 
 
 /* End settings */
+/* start profile */
+
+@media (max-width:767px) {
+    .profile-page .overview {
+        flex-direction: column;
+    }
+}
+
+.profile-page .overview .avatar-image {
+    width: 300px;
+}
+
+@media (min-width:767px) {
+    .profile-page .overview .avatar-image {
+        border-right: 1px solid #eee;
+    }
+}
+
+.profile-page .overview .avatar-image img {
+    max-width: 120px;
+}
+
+.profile-page .overview .avatar-image .bar {
+    width: 150px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.profile-page .overview .avatar-image .bar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 5px;
+    width: 65%;
+    background-color: var(--blue-color);
+    border-radius: 5px;
+}
+
+.profile-page .overview .avatar-info .row {
+    flex-wrap: wrap;
+    border-bottom: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.profile-page .overview .avatar-info .row h2 {
+    font-weight: normal;
+}
+
+.profile-page .overview .avatar-info .row:hover {
+    background-color: #f9f9f9;
+}
+
+.profile-page .overview .avatar-info .row>div {
+    padding: 10px 0 0;
+}
+
+@media (min-width:767px) {
+    .profile-page .overview .avatar-info .row>div {
+        min-width: 250px;
+    }
+}
+
+.profile-page .overview .avatar-info .toggle-switch {
+    height: 20px;
+    font-size: 8px;
+}
+
+.profile-page .overview .avatar-info .toggle-switch::before {
+    width: 12px;
+    height: 12px;
+}
+
+.profile-page .overview .avatar-info .toggle-checkbox:checked+.toggle-switch::before {
+    top: 4px;
+    left: 62px;
+}
+
+@media(max-width:767px) {
+    .profile-page .other-data {
+        flex-direction: column;
+    }
+}
+
+.profile-page .skills-card {
+    flex-grow: 1;
+}
+
+.profile-page .skills-card ul li {
+    padding: 15px 0;
+}
+
+.profile-page .skills-card ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.profile-page .skills-card ul li span {
+    display: inline-flex;
+    font-size: 14px;
+}
+
+.profile-page .skills-card ul li span:not(:last-child) {
+    margin-right: 5px;
+}
+
+
+
+.profile-page .activites {
+    flex-grow: 2;
+}
+
+.profile-page .activites .activity:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-page .activites .activity img {
+    max-width: 64px;
+    margin-right: 10px;
+}
+
+@media (min-width:767px) {
+    .profile-page .activites .activity .date {
+        margin-left: auto;
+        text-align: right;
+    }
+}
+
+@media (max-width:767px) {
+    .profile-page .activites .activity {
+        flex-direction: column;
+    }
+
+    .profile-page .activites .activity img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .profile-page .activites .activity .date {
+        margin-top: 15px;
+    }
+}
+
+/* End profile */
 /* start animation*/
 @keyframes change-color {
     from {
